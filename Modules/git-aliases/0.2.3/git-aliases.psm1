@@ -10,6 +10,8 @@ $FunctionsToExport = @(
 	'gau',
 	'gb',
 	'gba',
+	'gbd',
+	'gbD',
 	'gbda',
 	'gbl',
 	'gbnm',

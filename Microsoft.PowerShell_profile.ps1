@@ -49,3 +49,4 @@ Import-Module PSFzf
 Import-Module ZLocation
 Import-Module PSEverything
 Import-Module PoShFuck
+Import-Module git-aliases
