@@ -112,6 +112,23 @@ function gcmsg {
 function gco {
 	git checkout $args
 }
+function fco {
+	$branch = $(git branch -a | fzf)
+	$target=$branch.Trim()
+	if ($target.Contains("remote"))
+	{
+		$remote=$target
+		$target1 = $remote.Split("/")
+		$target2 = $target1[2]
+		echo $target2
+		git checkout -b $target2 $remote
+	}
+	else
+	{
+		echo $target
+		git checkout $target
+	}
+}
 function gcount {
 	git shortlog -sn $args
 }

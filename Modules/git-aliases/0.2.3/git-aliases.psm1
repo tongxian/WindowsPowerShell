@@ -35,6 +35,7 @@ $FunctionsToExport = @(
 	'gcd',
 	'gcmsg',
 	'gco',
+	'fco',
 	'gcount',
 	'gcp',
 	'gcpa',

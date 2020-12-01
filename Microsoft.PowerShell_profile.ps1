@@ -46,6 +46,7 @@ Set-PSReadlineOption -Colors @{Prediction = 'DarkGreen' }
 Remove-PSReadlineKeyHandler 'Ctrl+r'
 Remove-PSReadlineKeyHandler 'Ctrl+t'
 Import-Module PSFzf
+Enable-PsFzfAliases
 Import-Module ZLocation
 Import-Module PSEverything
 Import-Module PoShFuck
