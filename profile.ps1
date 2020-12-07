@@ -1,4 +1,0 @@
-﻿
-
-Import-Module ZLocation
-
