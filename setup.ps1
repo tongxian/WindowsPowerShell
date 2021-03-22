@@ -6,7 +6,7 @@ Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
 
 #Install Modules and import them
 Install-PackageProvider NuGet -MinimumVersion '2.8.5.201' -Force
-Set-PSRepository -Name PSGallery -InstallationPolicy Trusted3
+Set-PSRepository -Name PSGallery -InstallationPolicy Trusted
 Install-PackageProvider -Name NuGet -Force
 Install-Module -Name PowerShellGet -Force
 # Close Powershell and Restart a new powershell window after install PowerShellGet , reopen Powershell with administrator

@@ -10,11 +10,14 @@ if (0) {
     Set-PSRepository -Name PSGallery -InstallationPolicy Trusted3
     Install-PackageProvider -Name NuGet -Force
 }
-# git clone the configurated repository
-Set-Location $env:USERPROFILE\Documents\
-$psModulePath = Get-ChildItem -Name
-if (!($psModulePath -contains "WindowsPowerShell")) {
-    git clone https://github.com/tongxian/WindowsPowerShell.git
+if (0)
+{ # test several times, it doesn't work
+    # git clone the configurated repository
+    Set-Location $env:USERPROFILE\Documents\
+    $psModulePath = Get-ChildItem -Name
+    if (!($psModulePath -contains "WindowsPowerShell")) {
+        git clone https://github.com/tongxian/WindowsPowerShell.git
+    }
 }
 # $checkModule = "posh-git"
 
