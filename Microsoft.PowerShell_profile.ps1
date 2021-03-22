@@ -63,7 +63,7 @@ Set-PSReadLineOption -ShowToolTips
 Set-PSReadLineOption -PredictionSource History
 
 #Set the color for Prediction (auto-suggestion)
-Set-PSReadlineOption -Colors @{Prediction = 'DarkGreen' }
+#Set-PSReadlineOption -Colors @{Prediction = 'DarkGreen' }
 
 Remove-PSReadlineKeyHandler 'Ctrl+r'
 Remove-PSReadlineKeyHandler 'Ctrl+t'
