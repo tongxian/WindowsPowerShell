@@ -1,14 +1,13 @@
 # if use previous code to setup powershell install, skip this
-if (0) {
+if (1) {
     # Set ExecutionPolicy to enable install modules 
     # TODO need administrator rights
     Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Force
     Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
 
     # install neccissary package provider
-    # Install-PackageProvider NuGet -MinimumVersion '2.8.5.201' -Force
-    Set-PSRepository -Name PSGallery -InstallationPolicy Trusted3
-    Install-PackageProvider -Name NuGet -Force
+    Set-PSRepository -Name PSGallery -InstallationPolicy Trusted
+    # Install-PackageProvider -Name NuGet -Force
 }
 if (0)
 { # test several times, it doesn't work
@@ -41,6 +40,10 @@ function CheckAndInstallModules ($checkModule) {
             Install-Module PSReadLine -AllowPrerelease -Force  -Scope CurrentUser
             Write-Output "Close Powershell and Restart a new powershell window"
             invoke-expression 'cmd /c start powershell -Command { ./setup-stage2.ps1; Read-Host }'
+        }
+		elseif ($checkModule -contains "Get-ChildItemColor") {
+            Install-Module -Name  Get-ChildItemColor -Force -Scope CurrentUser -AllowClobber
+
         }
         else {
             Install-Module -Name $checkModule  -Scope CurrentUser

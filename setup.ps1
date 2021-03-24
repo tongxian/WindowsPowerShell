@@ -8,7 +8,8 @@ Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
 Install-PackageProvider NuGet -MinimumVersion '2.8.5.201' -Force
 Set-PSRepository -Name PSGallery -InstallationPolicy Trusted
 Install-PackageProvider -Name NuGet -Force
-Install-Module -Name PowerShellGet -Force
+#Install-Module -Name PowerShellGet -Force
+Install-Module -Name PowerShellGet -Force -Scope CurrentUser -AllowClobber
 # Close Powershell and Restart a new powershell window after install PowerShellGet , reopen Powershell with administrator
 # open Powershell with administrator
 # start-process powershell -verb runas
