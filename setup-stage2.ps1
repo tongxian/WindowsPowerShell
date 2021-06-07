@@ -76,3 +76,6 @@ git clone https://github.com/powerline/fonts.git
 
 .\fonts\install.ps1
 
+cp .\Microsoft.PowerShell_profile.ps1 $env:Userprofile\Documents\WindowsPowerShell
+cp .\.gitconfig $env:Userprofile\
+cp .\.gitignore_global $env:Userprofile\
