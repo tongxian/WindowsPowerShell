@@ -1,0 +1,23 @@
+[core]
+	# excludesfile = /Users/sean/.gitignore_global
+	excludesfile =c:\\Users\\Sean\\.gitignore_global
+	editor = code --wait
+[difftool "sourcetree"]
+	cmd = /usr/local/bin/bcomp \"$LOCAL\" \"$REMOTE\"
+	path = -ro
+[mergetool "sourcetree"]
+	cmd = /usr/local/bin/bcomp \"$LOCAL\" \"$REMOTE\" \"$BASE\" \"$MERGED\"
+	trustExitCode = true
+[user]
+	name = Sean Tong
+	email = sean.tong@zoom.us
+[commit]
+	template = /Users/sean/.stCommitMsg
+[merge]
+	tool = sourcetree
+[diff]
+	tool = sourcetree
+[checkout]
+	defaultRemote=origin	
+[credential]
+	helper = manager-core

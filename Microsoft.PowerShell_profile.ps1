@@ -52,8 +52,9 @@ Set-Theme Paradox
 
 Import-Module PSReadLine
 # Shows navigable menu of all options when hitting Tab
-Set-PSReadLineKeyHandler -Key Tab -Function MenuComplete
-
+Set-PSReadLineKeyHandler -Key Tab -Function MenuComplete # 设置 Tab 键补全
+Set-PSReadLineKeyHandler -Key "Ctrl+d" -Function Complete # 设置 Ctrl+d 为菜单补全和 Intellisense
+Set-PSReadLineKeyHandler -Key "Ctrl+z" -Function Undo # 设置 Ctrl+z 为撤销
 # Autocompleteion for Arrow keys
 Set-PSReadLineOption -HistorySearchCursorMovesToEnd
 Set-PSReadLineKeyHandler -Key UpArrow -Function HistorySearchBackward
@@ -63,7 +64,7 @@ Set-PSReadLineOption -ShowToolTips
 Set-PSReadLineOption -PredictionSource History
 
 #Set the color for Prediction (auto-suggestion)
-#Set-PSReadlineOption -Colors @{Prediction = 'DarkGreen' }
+Set-PSReadlineOption -Colors @{comment = 'DarkGreen' }
 
 Remove-PSReadlineKeyHandler 'Ctrl+r'
 Remove-PSReadlineKeyHandler 'Ctrl+t'
